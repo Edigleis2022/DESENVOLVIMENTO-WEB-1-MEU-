@@ -1,0 +1,11 @@
+#lista-tarefa{
+    width: 25%;
+}
+.tarefa{
+    padding: 5px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
