@@ -17,7 +17,9 @@ adiciona.addEventListener('click', function(){
     console.log("Tarefa Adicionada")
 
     li.addEventListener('click', function(event){
-        
+        if(event.target.className === "btn-excluir"){
+            listaTarefa.removeChild(li)
+        }
     })
 });
  
