@@ -1,5 +1,6 @@
 import './nav.js'
 import '../css/lista-tarefa.css'
+import 'phosphor-icons'
 
 const taref = document.querySelector('#input-nova-tarefa')
 const adiciona = document.querySelector('#btn-adicionar')
@@ -11,13 +12,13 @@ adiciona.addEventListener('click', function(){
     li.className = 'tarefa'
     li.innerHTML = `
 	<div>${descricaoTarefa}</div>
-    <button class="btn-excluir">Excluir</button>
+    <button class="btn-excluir"><i class="ph-trash"></i></button>
     `
     listaTarefa.appendChild(li)
     console.log("Tarefa Adicionada")
 
     li.addEventListener('click', function(event){
-        if(event.target.className === "btn-excluir"){
+        if(event.target.className === "btn-excluir" || event.target.className === "ph-trash"){
             listaTarefa.removeChild(li)
         }
     })
